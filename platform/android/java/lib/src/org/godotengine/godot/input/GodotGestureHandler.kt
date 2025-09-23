@@ -190,6 +190,11 @@ internal class GodotGestureHandler(private val inputHandler: GodotInputHandler) 
 		distanceX: Float,
 		distanceY: Float
 	): Boolean {
+
+		if (originEvent == null) {
+			return false
+		}
+
 		if (scaleInProgress) {
 			if (dragInProgress || lastDragX != 0.0f || lastDragY != 0.0f) {
 				if (originEvent != null) {
