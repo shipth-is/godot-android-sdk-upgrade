@@ -215,6 +215,11 @@ internal class GodotGestureHandler : SimpleOnGestureListener(), OnScaleGestureLi
 		distanceX: Float,
 		distanceY: Float
 	): Boolean {
+
+		if (originEvent == null) {
+			return false
+		}
+
 		if (scaleInProgress) {
 			if (dragInProgress) {
 				if (originEvent != null) {
