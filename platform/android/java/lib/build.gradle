@@ -30,6 +30,11 @@ android {
 
     namespace = "org.godotengine.godot"
 
+    buildFeatures {
+        buildConfig = true
+        aidl = true
+    }
+
     compileOptions {
         sourceCompatibility versions.javaVersion
         targetCompatibility versions.javaVersion

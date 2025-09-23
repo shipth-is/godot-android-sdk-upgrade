@@ -210,11 +210,16 @@ internal class GodotGestureHandler : SimpleOnGestureListener(), OnScaleGestureLi
 	}
 
 	override fun onScroll(
-		originEvent: MotionEvent,
+		originEvent: MotionEvent?,
 		terminusEvent: MotionEvent,
 		distanceX: Float,
 		distanceY: Float
 	): Boolean {
+
+		if (originEvent == null) {
+			return false
+		}
+
 		if (scaleInProgress) {
 			if (dragInProgress) {
 				// Cancel the drag
