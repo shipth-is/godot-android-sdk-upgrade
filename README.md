@@ -5,8 +5,8 @@
 - [x] [4.0](https://github.com/shipth-is/godot-android-sdk-upgrade/tree/4.0)
 - [x] [4.1](https://github.com/shipth-is/godot-android-sdk-upgrade/tree/4.1)
 - [x] [4.2](https://github.com/shipth-is/godot-android-sdk-upgrade/tree/4.2)
-- [ ] 4.3
-- [ ] 4.4
+- [x] [4.3](https://github.com/shipth-is/godot-android-sdk-upgrade/tree/4.3)
+- [x] [4.4](https://github.com/shipth-is/godot-android-sdk-upgrade/tree/4.4)
 - [ ] Create releases
 
 ## Looking for 3.x?
