@@ -1,6 +1,6 @@
 # Android SDK 35 Patched Releases of Godot 4.x
 
-## Why does this repo exists?
+## Why does this repo exist?
 
 Google Play now requires all new apps and updates to target **Android 15 (API level 35)**.
 
@@ -35,11 +35,10 @@ At the moment, only **Godot 4.5-stable** and **3.7-dev** (unreleased) support An
 - The [3.7 branch](https://github.com/godotengine/godot/tree/3.x) of Godot already supports Android SDK 35.
 - To download a release see the latest nightly [release](https://github.com/shipth-is/godot-3.x-builds/releases)
 
-## Progress
+## Releases
 
-- [x] [4.0](https://github.com/shipth-is/godot-android-sdk-upgrade/tree/4.0)
-- [x] [4.1](https://github.com/shipth-is/godot-android-sdk-upgrade/tree/4.1)
-- [x] [4.2](https://github.com/shipth-is/godot-android-sdk-upgrade/tree/4.2)
-- [x] [4.3](https://github.com/shipth-is/godot-android-sdk-upgrade/tree/4.3)
-- [x] [4.4](https://github.com/shipth-is/godot-android-sdk-upgrade/tree/4.4)
-- [ ] Create releases
+- [4.0.5](https://github.com/shipth-is/godot-android-sdk-upgrade/releases/tag/4.0.5)
+- [4.1.5](https://github.com/shipth-is/godot-android-sdk-upgrade/releases/tag/4.1.5)
+- [4.2.3](https://github.com/shipth-is/godot-android-sdk-upgrade/releases/tag/4.2.3)
+- [4.3.1](https://github.com/shipth-is/godot-android-sdk-upgrade/releases/tag/4.3.1)
+- [4.4.2](https://github.com/shipth-is/godot-android-sdk-upgrade/releases/tag/4.4.2)
