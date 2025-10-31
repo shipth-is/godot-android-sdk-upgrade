@@ -50,12 +50,12 @@ def get_android_ndk_root(env):
 
 # This is kept in sync with the value in 'platform/android/java/app/config.gradle'.
 def get_ndk_version():
-    return "27.2.12479018"
+    return "28.1.13356709"
 
 
 # This is kept in sync with the value in 'platform/android/java/app/config.gradle'.
 def get_min_target_api():
-    return 21
+    return 24
 
 
 def get_flags():
