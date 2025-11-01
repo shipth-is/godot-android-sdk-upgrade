@@ -21,7 +21,7 @@ At the moment, only **Godot 4.5.1-stable** and **3.6.2-stable** support both of 
 | Godot Version  | compileSdk | Release-ready (API 35+) |
 |----------------|------------|-------------------------|
 | 3.6.1-stable   | 34         | No                      |
-| **3.7-dev**    | **35**     | **Yes**                 |
+| **3.6.2-stable**    | **35**     | **Yes**                 |
 | 4.0.1-stable   | 32         | No                      |
 | 4.0.2-stable   | 33         | No                      |
 | 4.0.3-stable   | 33         | No                      |
@@ -34,6 +34,7 @@ At the moment, only **Godot 4.5.1-stable** and **3.6.2-stable** support both of 
 | 4.2.2-stable   | 34         | No                      |
 | 4.4.1-stable   | 34         | No                      |
 | **4.5-stable** | **35**     | **Yes**                 |
+| **4.5.1-stable** | **35**     | **Yes**                 |
 
 ## Looking for 3.x?
 
