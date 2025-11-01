@@ -2,16 +2,21 @@
 
 ## Why does this repo exist?
 
-Google Play now requires all new apps and updates to target **Android 15 (API level 35)**.
+Google Play now requires:
 
+> **Android 15 (API level 35) requirement**
 > “Starting August 31, 2025: New apps and app updates must target Android 15 (API level 35) or higher to be submitted to Google Play.”
 > [Google Play Console Help](https://support.google.com/googleplay/android-developer/answer/11926878?hl=en)
 
-This means projects built with earlier versions of Godot (which target SDK 34 or lower) will be **rejected during Play Store submission** unless the engine is patched or upgraded to support SDK 35.
+> **16 KB Google Play compatibility requirement**
+> Starting November 1st, 2025, all new apps and updates to existing apps submitted to Google Play and targeting Android 15+ devices must support 16 KB page sizes on 64-bit devices.
+> [Android Device Compatibility Guide](https://developer.android.com/guide/practices/page-sizes)
+
+This means projects built with earlier versions of Godot will be **rejected during Play Store submission** unless the engine is patched.
 
 ## Current status of Godot
 
-At the moment, only **Godot 4.5-stable** and **3.7-dev** (unreleased) support Android SDK version 35.
+At the moment, only **Godot 4.5.1-stable** and **3.6.2-stable** support both of these changes.
 
 | Godot Version  | compileSdk | Release-ready (API 35+) |
 |----------------|------------|-------------------------|
