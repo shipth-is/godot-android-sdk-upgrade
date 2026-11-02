@@ -36,6 +36,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.CallSuper;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -58,6 +59,20 @@ public abstract class FullScreenGodotApp extends FragmentActivity implements God
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.godot_app_layout);
+
+		// Register an `OnBackPressedCallback` for the Godot fragment. From API level 36,
+		// Activity#onBackPressed() is no longer called (predictive back).
+		getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+			@Override
+			public void handleOnBackPressed() {
+				if (godotFragment != null) {
+					godotFragment.onBackPressed();
+				} else {
+					setEnabled(false);
+					getOnBackPressedDispatcher().onBackPressed();
+				}
+			}
+		});
 
 		Fragment currentFragment = getSupportFragmentManager().findFragmentById(R.id.godot_fragment_container);
 		if (currentFragment instanceof Godot) {
@@ -129,15 +144,6 @@ public abstract class FullScreenGodotApp extends FragmentActivity implements God
 		super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 		if (godotFragment != null) {
 			godotFragment.onRequestPermissionsResult(requestCode, permissions, grantResults);
-		}
-	}
-
-	@Override
-	public void onBackPressed() {
-		if (godotFragment != null) {
-			godotFragment.onBackPressed();
-		} else {
-			super.onBackPressed();
 		}
 	}
 
