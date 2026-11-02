@@ -35,6 +35,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
+import androidx.activity.addCallback
 import androidx.annotation.CallSuper
 import androidx.fragment.app.FragmentActivity
 import org.godotengine.godot.utils.PermissionsUtil
@@ -66,6 +67,9 @@ abstract class GodotActivity : FragmentActivity(), GodotHost {
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.godot_app_layout)
+
+		// Register `OnBackPressedCallback` for the Godot fragment.
+		onBackPressedDispatcher.addCallback { godotFragment?.onBackPressed() }
 
 		handleStartIntent(intent, true)
 
@@ -159,10 +163,6 @@ abstract class GodotActivity : FragmentActivity(), GodotHost {
 				Log.d(TAG, "Permission ${permissions[i]} ${if (permissionGranted) { "granted"} else { "denied" }}")
 			}
 		}
-	}
-
-	override fun onBackPressed() {
-		godotFragment?.onBackPressed() ?: super.onBackPressed()
 	}
 
 	override fun getActivity(): Activity? {
